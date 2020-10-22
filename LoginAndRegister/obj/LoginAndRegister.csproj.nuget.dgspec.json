@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\windows\\source\\repos\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj": {}
+    "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj": {}
   },
   "projects": {
-    "C:\\Users\\windows\\source\\repos\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj": {
+    "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\windows\\source\\repos\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
+        "projectUniqueName": "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
         "projectName": "LoginAndRegister",
-        "projectPath": "C:\\Users\\windows\\source\\repos\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
+        "projectPath": "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
         "packagesPath": "C:\\Users\\windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\windows\\source\\repos\\LoginAndRegister\\LoginAndRegister\\obj\\",
+        "outputPath": "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
