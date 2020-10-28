@@ -14,27 +14,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using System.Security.Claims;
 
 namespace LoginAndRegister.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
+        private readonly RoleManager<IdentityRole> _roleManger;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-
-        public RegisterModel(
+        private readonly List<IdentityRole> roles;
+    
+        public RegisterModel(RoleManager<IdentityRole> roleManger,
             UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
+            _roleManger = roleManger;
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            roles = _roleManger.Roles.ToList();
         }
 
         [BindProperty]
@@ -46,6 +51,9 @@ namespace LoginAndRegister.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+           
+            public string Role { get; set; }
+
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "First Name")]
@@ -80,13 +88,16 @@ namespace LoginAndRegister.Areas.Identity.Pages.Account
             {
                 Response.Redirect("/");
             }
+            ViewData["roles"] = roles;
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+        
             returnUrl = returnUrl ?? Url.Content("~/");
+            var role = _roleManger.FindByIdAsync(Input.Role).Result;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
@@ -94,8 +105,9 @@ namespace LoginAndRegister.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
+                    _userManager.AddToRoleAsync(user,Input.Role).Wait();
                     _logger.LogInformation("User created a new account with password.");
-
+                    await _userManager.AddToRoleAsync(user, Input.Role);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
@@ -122,7 +134,7 @@ namespace LoginAndRegister.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
+            ViewData["roles"] = roles;
             // If we got this far, something failed, redisplay form  
             return Page();
         }

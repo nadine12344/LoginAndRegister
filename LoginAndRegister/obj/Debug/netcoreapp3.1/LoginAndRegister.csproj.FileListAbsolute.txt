@@ -340,3 +340,7 @@ C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netc
 C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\LoginAndRegister.dll
 C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\LoginAndRegister.pdb
 C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\LoginAndRegister.genruntimeconfig.cache
+C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\Razor\Views\Adminstration\CreateRole.cshtml.g.cs
+C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\Razor\Views\Adminstration\RoleList.cshtml.g.cs
+C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\Razor\Views\UserRoles\roles.cshtml.g.cs
+C:\Users\windows\Desktop\nadine\LoginAndRegister\LoginAndRegister\obj\Debug\netcoreapp3.1\Razor\Views\UserRoles\myDepartment.cshtml.g.cs
