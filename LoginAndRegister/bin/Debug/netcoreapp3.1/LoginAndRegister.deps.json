@@ -296,6 +296,14 @@
         "runtime": {
           "LoginAndRegister.dll": {}
         },
+        "resources": {
+          "ar/LoginAndRegister.resources.dll": {
+            "locale": "ar"
+          },
+          "en/LoginAndRegister.resources.dll": {
+            "locale": "en"
+          }
+        },
         "compile": {
           "LoginAndRegister.dll": {}
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aNEPfs8beJV4tBj9wfQY0mSBWVFo2KXsticXYmHEj6rnaq3bxDIJ4hjfodLH7Ijlz+LCmHQdfxPfv5JvJBnwjw==",
+  "dgSpecHash": "FW8eg+yOdJYe3O5z4njWawOPta2Nn771L29kZfl4XzO5xRw5INfBaYXR+JL9gz/7Tz8OGMHExcDXa8GS6yBWvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\windows\\Desktop\\nadine3\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
+  "projectFilePath": "C:\\Users\\windows\\Desktop\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\windows\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\windows\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",

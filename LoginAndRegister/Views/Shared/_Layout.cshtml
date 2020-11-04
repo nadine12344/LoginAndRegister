@@ -1,42 +1,50 @@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@using System.Globalization
+@if (CultureInfo.CurrentCulture.TextInfo.IsRightToLeft)
+{
+  <link rel="stylesheet" type="text/css" href="./css/rtl.css">
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LoginAndRegister</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - LoginAndRegister</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  
+  <link rel="stylesheet" href="~/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="~/css/rtl.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                <a class="navbar-brand" asp-area="" asp-controller="Adminstration" asp-action="CreateRole">Create Role</a>
-                <a class="navbar-brand" asp-area="" asp-controller="UserRoles" asp-action="roles"> Roles</a>
-               <a class="navbar-brand" asp-area="" asp-controller="UserRoles" asp-action="Angular">Roles Angular</a>
-                <a class="navbar-brand" asp-area="" asp-controller="UserRoles" asp-action="myDepartment">My Department</a>
+<body  dir="@(CultureInfo.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")" >
+  <header>
+    <nav class="navbar navbar-expand-md navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+      <div class="container">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@localizer["Home"]</a>
+        <a class="navbar-brand" asp-area="" asp-controller="Adminstration" asp-action="CreateRole">@localizer["Create Role"]</a>
+        <a class="navbar-brand" asp-area="" asp-controller="UserRoles" asp-action="roles"> @localizer["Roles"]</a>
+        <a class="navbar-brand" asp-area="" asp-controller="UserRoles" asp-action="Angular">@localizer["Roles Angular"]</a>
+        <a class="navbar-brand" asp-area="" asp-controller="UserRoles" asp-action="myDepartment">@localizer["My Department"]</a>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial.cshtml" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - LoginAndRegister - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+          <partial name="_LoginPartial.cshtml" />
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <main role="main" class="pb-3">
+      @RenderBody()
+    </main>
+  </div>
+
+  <footer class="border-top footer text-muted">
+    <div class="container">
+      &copy; 2020 - LoginAndRegister - <a asp-area="" asp-controller="Home" asp-action="Privacy">@localizer["Privacy"]</a>
+    </div>
+  </footer>
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @RenderSection("Scripts", required: false)
 </body>
 </html>
