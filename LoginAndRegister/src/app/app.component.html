@@ -1,0 +1,22 @@
+
+<h1>Dashboard</h1>
+<input type='text' [(ngModel)]='listFilter' matInput placeholder="Search for a role">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Roles</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let el of filtered">
+      <td>{{el.firstName}}</td>
+      <td>{{el.email}}</td>
+      <td *ngFor="let role of el.roles">{{role}}</td>
+    </tr>
+  </tbody>
+</table>

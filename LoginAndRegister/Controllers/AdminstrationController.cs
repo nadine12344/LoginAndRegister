@@ -1,4 +1,4 @@
-﻿using LoginAndRegister.Models;
+using LoginAndRegister.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -44,4 +44,5 @@ namespace LoginAndRegister.Controllers
             return View(roles);
         }
     }
+
 }

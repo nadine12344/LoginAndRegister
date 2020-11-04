@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using LoginAndRegister.Areas.Identity.Data;
 using LoginAndRegister.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -23,9 +24,10 @@ namespace LoginAndRegister.Controllers
             _roleManager = roleManager;
             _httpContextAccessor=httpContextAccessor;
     }
-      
+      [Authorize]
         public async Task<IActionResult> mydepartment()
         {
+     
             var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             AppUser app= await _userManager.FindByIdAsync(userId);
             // get user roles
@@ -72,7 +74,11 @@ namespace LoginAndRegister.Controllers
             }
             return View(userRolesViewModel);
         }
-
+    public IActionResult Angular()
+    {
+      return View();
     }
+
+  }
 
 }

@@ -8815,11 +8815,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
+      "projectUniqueName": "C:\\Users\\windows\\Desktop\\nadine3\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
       "projectName": "LoginAndRegister",
-      "projectPath": "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
+      "projectPath": "C:\\Users\\windows\\Desktop\\nadine3\\LoginAndRegister\\LoginAndRegister\\LoginAndRegister.csproj",
       "packagesPath": "C:\\Users\\windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\windows\\Desktop\\nadine\\LoginAndRegister\\LoginAndRegister\\obj\\",
+      "outputPath": "C:\\Users\\windows\\Desktop\\nadine3\\LoginAndRegister\\LoginAndRegister\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
